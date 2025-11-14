@@ -1,0 +1,2877 @@
+{
+  "timestamp": "2025-11-14T18:08:39.630574",
+  "config": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "llm_model": "llama3.1:8b",
+    "chunk_size": 512,
+    "top_k": 5
+  },
+  "summary": {
+    "performance": {
+      "total_queries": 16,
+      "successful_queries": 16,
+      "failed_queries": 0,
+      "success_rate": 1.0,
+      "avg_latency_ms": 9209.863811731339,
+      "median_latency_ms": 7127.967476844788,
+      "p95_latency_ms": 15352.003753185272,
+      "p99_latency_ms": 17091.37681722641,
+      "min_latency_ms": 5126.882076263428,
+      "max_latency_ms": 17526.220083236694,
+      "std_latency_ms": 3788.4003211041863,
+      "within_threshold_pct": 0.0,
+      "avg_answer_length": 403.5625,
+      "avg_sources_retrieved": 5.0
+    },
+    "quality": {
+      "avg_quality_score": 0.44656887848463933,
+      "avg_faithfulness": 0.46573342116820377,
+      "avg_answer_relevance": 0.6105654761904762,
+      "avg_context_relevance": 0.2634077380952381,
+      "hallucination_count": 4,
+      "contradiction_count": 8,
+      "below_faithfulness_threshold": 11,
+      "below_relevance_threshold": 5
+    },
+    "errors": {
+      "total_errors": 0
+    },
+    "total_evaluations": 16
+  },
+  "results": [
+    {
+      "query": "What does BERT stand for?",
+      "timestamp": "2025-11-14T18:06:11.534612",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 14627.264976501465,
+      "answer": "I don't have enough information in the provided context to answer this question.\n\nHowever, based on general knowledge, I can tell you that BERT stands for Bidirectional Encoder Representations from Transformers. But since I'm only supposed to use information from the provided context, I'll refrain from providing an answer.",
+      "answer_length": 324,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "the [MASK] symbol for MLM; SAME means that\nwe keep the target token as is; RND means that\nwe replace the target token with another random\ntoken.\nThe numbers in the left part of the table repre-\nsent t",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 15,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "is to \ufb01ne-tune models pre-trained with Ima-\ngeNet (Deng et al., 2009; Yosinski et al., 2014).\n3\nBERT\nWe introduce BERT and its detailed implementa-\ntion in this section. There are two steps in our\nfra",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 2,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "he bought a gallon [MASK] milk [SEP]\nLabel = IsNext\nInput = [CLS] the man [MASK] to the store [SEP]\npenguin [MASK] are flight ##less birds [SEP]\nLabel = NotNext\nA.2\nPre-training Procedure\nTo generate ",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 12,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "and the \ufb01nal hidden vector for the ith input token\nas Ti \u2208RH.\nFor a given token, its input representation is\nconstructed by summing the corresponding token,\nsegment, and position embeddings. A visuali",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "structing the entire input.\nAlthough this allows us to obtain a bidirec-\ntional pre-trained model, a downside is that we\nare creating a mismatch between pre-training and\n\ufb01ne-tuning, since the [MASK] t",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.0,
+        "total_sentences": 3,
+        "grounded_sentences": 0,
+        "ungrounded_sentences": 3,
+        "is_uncertain": true,
+        "sentence_details": [
+          {
+            "sentence": "I don't have enough information in the provided context to answer this question",
+            "grounded": false,
+            "word_overlap": 0.3076923076923077
+          },
+          {
+            "sentence": "However, based on general knowledge, I can tell you that BERT stands for Bidirectional Encoder Representations from Transformers",
+            "grounded": false,
+            "word_overlap": 0.3333333333333333
+          },
+          {
+            "sentence": "But since I'm only supposed to use information from the provided context, I'll refrain from providing an answer",
+            "grounded": false,
+            "word_overlap": 0.29411764705882354
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.6666666666666666,
+        "query_terms": [
+          "bert",
+          "stand",
+          "for?"
+        ],
+        "terms_found": 2,
+        "term_coverage": 0.6666666666666666,
+        "is_uncertain": true,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.2,
+        "avg_doc_relevance": 0.2,
+        "relevant_docs": 0,
+        "total_docs": 5,
+        "doc_scores": [
+          0.25,
+          0.25,
+          0.0,
+          0.25,
+          0.25
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": false,
+        "contradiction_count": 0,
+        "patterns": []
+      },
+      "quality_score": 0.2888888888888889
+    },
+    {
+      "query": "What are the two pre-training tasks used in BERT?",
+      "timestamp": "2025-11-14T18:06:26.172939",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 6332.308053970337,
+      "answer": "I don't have enough information in the provided context to answer this question. The text mentions that there are \"different pre-training tasks\" and that during pre-training, the model is trained on unlabeled data over these tasks, but it does not specify what those tasks are.",
+      "answer_length": 277,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "the pre-trained parameters, and all of the param-\neters are \ufb01ne-tuned using labeled data from the\ndownstream tasks. Each downstream task has sep-\narate \ufb01ne-tuned models, even though they are ini-\ntial",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 2,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "is to \ufb01ne-tune models pre-trained with Ima-\ngeNet (Deng et al., 2009; Yosinski et al., 2014).\n3\nBERT\nWe introduce BERT and its detailed implementa-\ntion in this section. There are two steps in our\nfra",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 2,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "model is \ufb01ne-tuned directly on the downstream\ntasks and uses only a very small number of ran-\ndomly initialized additional parameters, the task-\nspeci\ufb01c models can bene\ufb01t from the larger, more\nexpress",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 8,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "tasks can be seen in Figure 4. Our task-speci\ufb01c\nmodels are formed by incorporating BERT with\none additional output layer, so a minimal num-\nber of parameters need to be learned from scratch.\nAmong the",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "classi\ufb01er token ([CLS]) which are only in-\ntroduced at \ufb01ne-tuning time; BERT learns\n[SEP], [CLS] and sentence A/B embed-\ndings during pre-training.\n\u2022 GPT was trained for 1M steps with a batch\nsize of ",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.5,
+        "total_sentences": 2,
+        "grounded_sentences": 1,
+        "ungrounded_sentences": 1,
+        "is_uncertain": true,
+        "sentence_details": [
+          {
+            "sentence": "I don't have enough information in the provided context to answer this question",
+            "grounded": false,
+            "word_overlap": 0.38461538461538464
+          },
+          {
+            "sentence": "The text mentions that there are \"different pre-training tasks\" and that during pre-training, the model is trained on unlabeled data over these tasks, but it does not specify what those tasks are",
+            "grounded": true,
+            "max_ngram": 3
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.4,
+        "query_terms": [
+          "two",
+          "pre-training",
+          "tasks",
+          "used",
+          "bert?"
+        ],
+        "terms_found": 2,
+        "term_coverage": 0.4,
+        "is_uncertain": true,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.36000000000000004,
+        "avg_doc_relevance": 0.36000000000000004,
+        "relevant_docs": 3,
+        "total_docs": 5,
+        "doc_scores": [
+          0.2,
+          0.6,
+          0.4,
+          0.2,
+          0.4
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": true,
+        "contradiction_count": 1,
+        "patterns": [
+          [
+            "\\bnot\\b",
+            "\\bis\\b"
+          ]
+        ]
+      },
+      "quality_score": 0.42
+    },
+    {
+      "query": "What is the difference between BERT-base and BERT-large?",
+      "timestamp": "2025-11-14T18:06:32.505858",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 12607.395887374878,
+      "answer": "According to the context, the main differences between BERT-BASE and BERT-LARGE are:\n\n1. Model size: BERT-LARGE has 340M parameters, while BERT-BASE has 110M parameters.\n2. Number of layers (L): BERT-LARGE has L=24, while BERT-BASE has L=12.\n3. Hidden state size (H): BERT-LARGE has H=1024, while BERT-BASE has H=768.\n4. Number of self-attention heads (A): BERT-LARGE has A=16, while BERT-BASE has A=12.\n\nThese differences contribute to the improved performance of BERT-LARGE compared to BERT-BASE on various tasks, as mentioned in the paper.",
+      "answer_length": 542,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "tention masking. For the largest and most widely\nreported GLUE task, MNLI, BERT obtains a 4.6%\nabsolute accuracy improvement. On the of\ufb01cial\nGLUE leaderboard10, BERTLARGE obtains a score\nof 80.5, comp",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 5,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "largest Transformer we have found in the literature\nis (L=64, H=512, A=2) with 235M parameters\n(Al-Rfou et al., 2018). By contrast, BERTBASE\ncontains 110M parameters and BERTLARGE con-\ntains 340M para",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 7,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "84.2 91.1 85.1 91.8\nBERTLARGE (Ens.+TriviaQA) 86.2 92.2 87.4 93.2\nTable 2:\nSQuAD 1.1 results. The BERT ensemble\nis 7x systems which use different pre-training check-\npoints and \ufb01ne-tuning seeds.\nSyste",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 6,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "H, and the number of self-attention heads as A.3\nWe primarily report results on two model sizes:\nBERTBASE (L=12, H=768, A=12, Total Param-\neters=110M) and BERTLARGE (L=24, H=1024,\nA=16, Total Paramete",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 2,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "the [MASK] symbol for MLM; SAME means that\nwe keep the target token as is; RND means that\nwe replace the target token with another random\ntoken.\nThe numbers in the left part of the table repre-\nsent t",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 15,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.2222222222222222,
+        "total_sentences": 9,
+        "grounded_sentences": 2,
+        "ungrounded_sentences": 7,
+        "is_uncertain": false,
+        "sentence_details": [
+          {
+            "sentence": "According to the context, the main differences between BERT-BASE and BERT-LARGE are:\n\n1",
+            "grounded": false,
+            "word_overlap": 0.25
+          },
+          {
+            "sentence": "Model size: BERT-LARGE has 340M parameters, while BERT-BASE has 110M parameters",
+            "grounded": true,
+            "word_overlap": 0.6
+          },
+          {
+            "sentence": "Number of layers (L): BERT-LARGE has L=24, while BERT-BASE has L=12",
+            "grounded": false,
+            "word_overlap": 0.5
+          },
+          {
+            "sentence": "Hidden state size (H): BERT-LARGE has H=1024, while BERT-BASE has H=768",
+            "grounded": false,
+            "word_overlap": 0.4
+          },
+          {
+            "sentence": "Number of self-attention heads (A): BERT-LARGE has A=16, while BERT-BASE has A=12",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "These differences contribute to the improved performance of BERT-LARGE compared to BERT-BASE on various tasks, as mentioned in the paper",
+            "grounded": false,
+            "word_overlap": 0.5
+          }
+        ],
+        "likely_hallucination": true
+      },
+      "answer_relevance": {
+        "score": 0.75,
+        "query_terms": [
+          "difference",
+          "between",
+          "bert-base",
+          "bert-large?"
+        ],
+        "terms_found": 3,
+        "term_coverage": 0.75,
+        "is_uncertain": false,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.2,
+        "avg_doc_relevance": 0.2,
+        "relevant_docs": 0,
+        "total_docs": 5,
+        "doc_scores": [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": false,
+        "contradiction_count": 0,
+        "patterns": []
+      },
+      "quality_score": 0.3907407407407408
+    },
+    {
+      "query": "Which datasets were used for pre-training BERT?",
+      "timestamp": "2025-11-14T18:06:45.115397",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 8518.009185791016,
+      "answer": "I don't have enough information in the provided context to answer this question. The context mentions that BERT was fine-tuned on labeled data from downstream tasks, but it does not specify which datasets were used for pre-training BERT itself. It only mentions ImageNet (Deng et al., 2009; Yosinski et al., 2014) as a pre-trained model, but this is related to the fine-tuning step, not the pre-training step of BERT.",
+      "answer_length": 417,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "is to \ufb01ne-tune models pre-trained with Ima-\ngeNet (Deng et al., 2009; Yosinski et al., 2014).\n3\nBERT\nWe introduce BERT and its detailed implementa-\ntion in this section. There are two steps in our\nfra",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 2,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "the [MASK] symbol for MLM; SAME means that\nwe keep the target token as is; RND means that\nwe replace the target token with another random\ntoken.\nThe numbers in the left part of the table repre-\nsent t",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 15,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "approach.\nThe most comparable existing pre-training\nmethod to BERT is OpenAI GPT, which trains a\nleft-to-right Transformer LM on a large text cor-\npus. In fact, many of the design decisions in BERT\nwe",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "the pre-trained parameters, and all of the param-\neters are \ufb01ne-tuned using labeled data from the\ndownstream tasks. Each downstream task has sep-\narate \ufb01ne-tuned models, even though they are ini-\ntial",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 2,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "model is \ufb01ne-tuned directly on the downstream\ntasks and uses only a very small number of ran-\ndomly initialized additional parameters, the task-\nspeci\ufb01c models can bene\ufb01t from the larger, more\nexpress",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 8,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.8,
+        "total_sentences": 5,
+        "grounded_sentences": 4,
+        "ungrounded_sentences": 1,
+        "is_uncertain": true,
+        "sentence_details": [
+          {
+            "sentence": "I don't have enough information in the provided context to answer this question",
+            "grounded": false,
+            "word_overlap": 0.38461538461538464
+          },
+          {
+            "sentence": "The context mentions that BERT was fine-tuned on labeled data from downstream tasks, but it does not specify which datasets were used for pre-training BERT itself",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "It only mentions ImageNet (Deng et al",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": ", 2009; Yosinski et al",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": ", 2014) as a pre-trained model, but this is related to the fine-tuning step, not the pre-training step of BERT",
+            "grounded": true,
+            "word_overlap": 0.631578947368421
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.8333333333333334,
+        "query_terms": [
+          "which",
+          "datasets",
+          "were",
+          "used",
+          "pre-training",
+          "bert?"
+        ],
+        "terms_found": 5,
+        "term_coverage": 0.8333333333333334,
+        "is_uncertain": true,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.3428571428571428,
+        "avg_doc_relevance": 0.3428571428571428,
+        "relevant_docs": 2,
+        "total_docs": 5,
+        "doc_scores": [
+          0.2857142857142857,
+          0.5714285714285714,
+          0.5714285714285714,
+          0.14285714285714285,
+          0.14285714285714285
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": true,
+        "contradiction_count": 1,
+        "patterns": [
+          [
+            "\\bnot\\b",
+            "\\bis\\b"
+          ]
+        ]
+      },
+      "quality_score": 0.6587301587301587
+    },
+    {
+      "query": "What is the maximum sequence length used in BERT?",
+      "timestamp": "2025-11-14T18:06:53.635905",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 5650.43830871582,
+      "answer": "I don't have enough information in the provided context to answer this question. The text mentions using a 30,000 token vocabulary for WordPiece embeddings, but it does not specify the maximum sequence length that can be handled by BERT.",
+      "answer_length": 237,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "extract long contiguous sequences.\n3.2\nFine-tuning BERT\nFine-tuning is straightforward since the self-\nattention mechanism in the Transformer al-\nlows BERT to model many downstream tasks\u2014\nwhether they",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 4,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "Input/Output Representations\nTo make BERT\nhandle a variety of down-stream tasks, our input\nrepresentation is able to unambiguously represent\nboth a single sentence and a pair of sentences\n(e.g., \u27e8Ques",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "model pre-training. For the pre-training corpus we\nuse the BooksCorpus (800M words) (Zhu et al.,\n2015) and English Wikipedia (2,500M words).\nFor Wikipedia we extract only the text passages\nand ignore ",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 4,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "put token sequence to BERT, which may be a sin-\ngle sentence or two sentences packed together.\nWe use WordPiece embeddings (Wu et al.,\n2016) with a 30,000 token vocabulary. The \ufb01rst\ntoken of every seq",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "training tasks presented in Section 3.1 account for\nthe majority of the empirical improvements, but\nwe do note that there are several other differences\nbetween how BERT and GPT were trained:\n\u2022 GPT is ",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.5,
+        "total_sentences": 2,
+        "grounded_sentences": 1,
+        "ungrounded_sentences": 1,
+        "is_uncertain": true,
+        "sentence_details": [
+          {
+            "sentence": "I don't have enough information in the provided context to answer this question",
+            "grounded": false,
+            "word_overlap": 0.38461538461538464
+          },
+          {
+            "sentence": "The text mentions using a 30,000 token vocabulary for WordPiece embeddings, but it does not specify the maximum sequence length that can be handled by BERT",
+            "grounded": true,
+            "max_ngram": 3
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.6,
+        "query_terms": [
+          "maximum",
+          "sequence",
+          "length",
+          "used",
+          "bert?"
+        ],
+        "terms_found": 3,
+        "term_coverage": 0.6,
+        "is_uncertain": true,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.2,
+        "avg_doc_relevance": 0.2,
+        "relevant_docs": 1,
+        "total_docs": 5,
+        "doc_scores": [
+          0.2,
+          0.2,
+          0.2,
+          0.4,
+          0.0
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": true,
+        "contradiction_count": 1,
+        "patterns": [
+          [
+            "\\bnot\\b",
+            "\\bis\\b"
+          ]
+        ]
+      },
+      "quality_score": 0.43333333333333335
+    },
+    {
+      "query": "How does BERT achieve bidirectional context?",
+      "timestamp": "2025-11-14T18:06:59.288646",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 6302.164077758789,
+      "answer": "BERT achieves bidirectional context by jointly conditioning on both left and right context in all layers during pre-training. This is stated in the abstract of the paper, which says \"BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers.\"",
+      "answer_length": 338,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "BERT: Pre-training of Deep Bidirectional Transformers for\nLanguage Understanding\nJacob Devlin\nMing-Wei Chang\nKenton Lee\nKristina Toutanova\nGoogle AI Language\n{jacobdevlin,mingweichang,kentonl,kristout",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 0,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "sentation models (Peters et al., 2018a; Rad-\nford et al., 2018), BERT is designed to pre-\ntrain deep bidirectional representations from\nunlabeled text by jointly conditioning on both\nleft and right co",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 0,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "Input/Output Representations\nTo make BERT\nhandle a variety of down-stream tasks, our input\nrepresentation is able to unambiguously represent\nboth a single sentence and a pair of sentences\n(e.g., \u27e8Ques",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "In Proceedings of the IEEE\ninternational conference on computer vision, pages\n19\u201327.\nAppendix for \u201cBERT: Pre-training of\nDeep Bidirectional Transformers for\nLanguage Understanding\u201d\nWe organize the app",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 11,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "right-to-left language models to pre-train BERT.\nInstead, we pre-train BERT using two unsuper-\nvised tasks, described in this section. This step\nis presented in the left part of Figure 1.\nTask #1: Mas",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.6666666666666666,
+        "total_sentences": 3,
+        "grounded_sentences": 2,
+        "ungrounded_sentences": 1,
+        "is_uncertain": false,
+        "sentence_details": [
+          {
+            "sentence": "BERT achieves bidirectional context by jointly conditioning on both left and right context in all layers during pre-training",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "This is stated in the abstract of the paper, which says \"BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers",
+            "grounded": true,
+            "max_ngram": 3
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.75,
+        "query_terms": [
+          "bert",
+          "achieve",
+          "bidirectional",
+          "context?"
+        ],
+        "terms_found": 3,
+        "term_coverage": 0.75,
+        "is_uncertain": false,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.36,
+        "avg_doc_relevance": 0.36,
+        "relevant_docs": 4,
+        "total_docs": 5,
+        "doc_scores": [
+          0.4,
+          0.4,
+          0.2,
+          0.4,
+          0.4
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": false,
+        "contradiction_count": 0,
+        "patterns": []
+      },
+      "quality_score": 0.5922222222222221
+    },
+    {
+      "query": "What is masked language modeling?",
+      "timestamp": "2025-11-14T18:07:05.592819",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 6892.834663391113,
+      "answer": "Masked Language Modeling (MLM) is the procedure where some percentage of input tokens at random are masked, and then the model predicts those masked tokens. In this case, 15% of all WordPiece tokens in each sequence are masked at random. The final hidden vectors corresponding to the mask tokens are fed into an output softmax over the vocabulary.",
+      "answer_length": 347,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "model begins to outperform the LTR model\nalmost immediately.\nC.2\nAblation for Different Masking\nProcedures\nIn Section 3.1, we mention that BERT uses a\nmixed strategy for masking the target tokens when",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 15,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "case, the \ufb01nal hidden vectors corresponding to the\nmask tokens are fed into an output softmax over\nthe vocabulary, as in a standard LM. In all of our\nexperiments, we mask 15% of all WordPiece to-\nkens",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "the left-context-only version is referred to as a \u201cTransformer\ndecoder\u201d since it can be used for text generation.\nIn order to train a deep bidirectional representa-\ntion, we simply mask some percentag",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "a distributional contextual representation of ev-\nery input token.\nAdditionally, because random\nreplacement only occurs for 1.5% of all tokens\n(i.e., 10% of 15%), this does not seem to harm\nthe model\u2019",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 11,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "Pre-training\nFine-Tuning\nNSP\nMask LM\nMask LM\nUnlabeled Sentence A and B Pair \nSQuAD\nQuestion Answer Pair\nNER\nMNLI\nFigure 1: Overall pre-training and \ufb01ne-tuning procedures for BERT. Apart from output l",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 2,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 1.0,
+        "total_sentences": 3,
+        "grounded_sentences": 3,
+        "ungrounded_sentences": 0,
+        "is_uncertain": false,
+        "sentence_details": [
+          {
+            "sentence": "Masked Language Modeling (MLM) is the procedure where some percentage of input tokens at random are masked, and then the model predicts those masked tokens",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "In this case, 15% of all WordPiece tokens in each sequence are masked at random",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "The final hidden vectors corresponding to the mask tokens are fed into an output softmax over the vocabulary",
+            "grounded": true,
+            "max_ngram": 3
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.6666666666666666,
+        "query_terms": [
+          "masked",
+          "language",
+          "modeling?"
+        ],
+        "terms_found": 2,
+        "term_coverage": 0.6666666666666666,
+        "is_uncertain": false,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.4,
+        "avg_doc_relevance": 0.4,
+        "relevant_docs": 4,
+        "total_docs": 5,
+        "doc_scores": [
+          0.6666666666666666,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.6666666666666666,
+          0.0
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": false,
+        "contradiction_count": 0,
+        "patterns": []
+      },
+      "quality_score": 0.6888888888888888
+    },
+    {
+      "query": "Why is BERT better than previous models like ELMo?",
+      "timestamp": "2025-11-14T18:07:12.487599",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 7268.600940704346,
+      "answer": "I don't have enough information in the provided context to answer this question about why BERT is better than ELMo. The text only mentions that BERT outperforms OpenAI GPT on certain tasks, but it does not provide a direct comparison between BERT and ELMo or an explanation for why BERT might be better.",
+      "answer_length": 303,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "A.4\nComparison of BERT, ELMo ,and\nOpenAI GPT\nHere we studies the differences in recent popular\nrepresentation learning models including ELMo,\nOpenAI GPT and BERT. The comparisons be-\ntween the model a",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "BERT (Ours)\nTrm\nTrm\nTrm\nTrm\nTrm\nTrm\n...\n...\nTrm\nTrm\nTrm\nTrm\nTrm\nTrm\n...\n...\nOpenAI GPT\nLstm\nELMo\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\n T1\nT2\n TN\n...\n...\n...\n...\n...\n E1\nE2\n EN\n...\n T",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 12,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "tention masking. For the largest and most widely\nreported GLUE task, MNLI, BERT obtains a 4.6%\nabsolute accuracy improvement. On the of\ufb01cial\nGLUE leaderboard10, BERTLARGE obtains a score\nof 80.5, comp",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 5,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "range of tasks, such as question answering and\nlanguage inference, without substantial task-\nspeci\ufb01c architecture modi\ufb01cations.\nBERT is conceptually simple and empirically\npowerful.\nIt obtains new sta",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 0,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "we concatenate the last 4 layers of BERT as the\nfeatures, which was shown to be the best approach\nin Section 5.3.\nFrom the table it can be seen that \ufb01ne-tuning is\nsurprisingly robust to different mask",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 15,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.0,
+        "total_sentences": 2,
+        "grounded_sentences": 0,
+        "ungrounded_sentences": 2,
+        "is_uncertain": true,
+        "sentence_details": [
+          {
+            "sentence": "I don't have enough information in the provided context to answer this question about why BERT is better than ELMo",
+            "grounded": false,
+            "word_overlap": 0.4
+          },
+          {
+            "sentence": "The text only mentions that BERT outperforms OpenAI GPT on certain tasks, but it does not provide a direct comparison between BERT and ELMo or an explanation for why BERT might be better",
+            "grounded": false,
+            "word_overlap": 0.4838709677419355
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.42857142857142855,
+        "query_terms": [
+          "bert",
+          "better",
+          "than",
+          "previous",
+          "models",
+          "like",
+          "elmo?"
+        ],
+        "terms_found": 3,
+        "term_coverage": 0.42857142857142855,
+        "is_uncertain": true,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.19999999999999998,
+        "avg_doc_relevance": 0.19999999999999998,
+        "relevant_docs": 0,
+        "total_docs": 5,
+        "doc_scores": [
+          0.2857142857142857,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.2857142857142857
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": true,
+        "contradiction_count": 1,
+        "patterns": [
+          [
+            "\\bnot\\b",
+            "\\bis\\b"
+          ]
+        ]
+      },
+      "quality_score": 0.20952380952380953
+    },
+    {
+      "query": "What is the next sentence prediction task?",
+      "timestamp": "2025-11-14T18:07:19.758664",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 6987.3340129852295,
+      "answer": "The Next Sentence Prediction (NSP) task involves constructing four input sequences by concatenating a given sentence (sentence A) with a possible continuation (sentence B). The model then predicts which of these continuations is most likely to follow the original sentence, using a score calculated from the dot product of a vector and the [CLS] token representation.",
+      "answer_length": 367,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "2018). These include sentence-level tasks such as\nnatural language inference (Bowman et al., 2015;\nWilliams et al., 2018) and paraphrasing (Dolan\nand Brockett, 2005), which aim to predict the re-\nlati",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 0,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "prediction. If the i-th token is chosen, we replace\nthe i-th token with (1) the [MASK] token 80% of\nthe time (2) a random token 10% of the time (3)\nthe unchanged i-th token 10% of the time. Then,\nTi w",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "construct four input sequences, each containing\nthe concatenation of the given sentence (sentence\nA) and a possible continuation (sentence B). The\nonly task-speci\ufb01c parameters introduced is a vec-\ntor",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 6,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "work has used objectives to rank candidate next\nsentences (Jernite et al., 2017; Logeswaran and\nLee, 2018), left-to-right generation of next sen-\ntence words given a representation of the previous\nsen",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 1,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "tune all the parameters end-to-end.\nAt the in-\nput, sentence A and sentence B from pre-training\nare analogous to (1) sentence pairs in paraphras-\ning, (2) hypothesis-premise pairs in entailment, (3)\nq",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 4,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 1.0,
+        "total_sentences": 2,
+        "grounded_sentences": 2,
+        "ungrounded_sentences": 0,
+        "is_uncertain": false,
+        "sentence_details": [
+          {
+            "sentence": "The Next Sentence Prediction (NSP) task involves constructing four input sequences by concatenating a given sentence (sentence A) with a possible continuation (sentence B)",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "The model then predicts which of these continuations is most likely to follow the original sentence, using a score calculated from the dot product of a vector and the [CLS] token representation",
+            "grounded": true,
+            "max_ngram": 3
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.75,
+        "query_terms": [
+          "next",
+          "sentence",
+          "prediction",
+          "task?"
+        ],
+        "terms_found": 3,
+        "term_coverage": 0.75,
+        "is_uncertain": false,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.4,
+        "avg_doc_relevance": 0.4,
+        "relevant_docs": 2,
+        "total_docs": 5,
+        "doc_scores": [
+          0.25,
+          0.75,
+          0.25,
+          0.5,
+          0.25
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": false,
+        "contradiction_count": 0,
+        "patterns": []
+      },
+      "quality_score": 0.7166666666666667
+    },
+    {
+      "query": "What were BERT's results on the GLUE benchmark?",
+      "timestamp": "2025-11-14T18:07:26.746603",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 17526.220083236694,
+      "answer": "According to Table 1 in the context provided, BERTBASE's results on the GLUE benchmark are:\n\n* 84.6/83.4 (MNLI)\n* 71.2 (QQP)\n* 90.5 (SST-2)\n* 93.5 (STS-B)\n* 52.1 (MRPC)\n* 85.8 (QNLI)\n* 88.9 (RTE)\n* 66.4 (WNLI) \n* 79.6 (Average, excluding WNLI)\n\nBERTLARGE's results on the GLUE benchmark are:\n\n* 86.7/85.9 (MNLI)\n* 72.1 (QQP)\n* 92.7 (SST-2)\n* 94.9 (STS-B)\n* 60.5 (MRPC)\n* 86.5 (QNLI)\n* 89.3 (RTE)\n* 70.1 (WNLI) \n* 82.1 (Average, excluding WNLI)\n\nNote that the \"Average\" column for BERTBASE is 79.6 and for BERTLARGE is 82.1, both excluding the problematic WNLI set.",
+      "answer_length": 564,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "75.1\nBERTBASE\n84.6/83.4\n71.2\n90.5\n93.5\n52.1\n85.8\n88.9\n66.4\n79.6\nBERTLARGE\n86.7/85.9\n72.1\n92.7\n94.9\n60.5\n86.5\n89.3\n70.1\n82.1\nTable 1: GLUE Test results, scored by the evaluation server (https://glueben",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 5,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "tention masking. For the largest and most widely\nreported GLUE task, MNLI, BERT obtains a 4.6%\nabsolute accuracy improvement. On the of\ufb01cial\nGLUE leaderboard10, BERTLARGE obtains a score\nof 80.5, comp",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 5,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "than the of\ufb01cial GLUE score, since we exclude the problematic WNLI set.8 BERT and OpenAI GPT are single-\nmodel, single task. F1 scores are reported for QQP and MRPC, Spearman correlations are reported",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 5,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "[CLS] is the special symbol for classi\ufb01cation out-\nput, and [SEP] is the special symbol to separate\nnon-consecutive token sequences.\nB\nDetailed Experimental Setup\nB.1\nDetailed Descriptions for the GLU",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "form different \ufb01ne-tuning data shuf\ufb02ing and clas-\nsi\ufb01er layer initialization.9\nResults are presented in Table 1.\nBoth\nBERTBASE and BERTLARGE outperform all sys-\ntems on all tasks by a substantial marg",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 5,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.21739130434782608,
+        "total_sentences": 23,
+        "grounded_sentences": 5,
+        "ungrounded_sentences": 18,
+        "is_uncertain": false,
+        "sentence_details": [
+          {
+            "sentence": "According to Table 1 in the context provided, BERTBASE's results on the GLUE benchmark are:\n\n* 84",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "4 (MNLI)\n* 71",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "2 (QQP)\n* 90",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "5 (SST-2)\n* 93",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "5 (STS-B)\n* 52",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "1 (MRPC)\n* 85",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "8 (QNLI)\n* 88",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "9 (RTE)\n* 66",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "4 (WNLI) \n* 79",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "6 (Average, excluding WNLI)\n\nBERTLARGE's results on the GLUE benchmark are:\n\n* 86",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "9 (MNLI)\n* 72",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "1 (QQP)\n* 92",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "7 (SST-2)\n* 94",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "9 (STS-B)\n* 60",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "5 (MRPC)\n* 86",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "5 (QNLI)\n* 89",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "3 (RTE)\n* 70",
+            "grounded": false,
+            "word_overlap": 0.25
+          },
+          {
+            "sentence": "1 (WNLI) \n* 82",
+            "grounded": false,
+            "word_overlap": 0.0
+          },
+          {
+            "sentence": "1 (Average, excluding WNLI)\n\nNote that the \"Average\" column for BERTBASE is 79",
+            "grounded": true,
+            "word_overlap": 0.5384615384615384
+          },
+          {
+            "sentence": "6 and for BERTLARGE is 82",
+            "grounded": true,
+            "word_overlap": 0.6666666666666666
+          },
+          {
+            "sentence": "1, both excluding the problematic WNLI set",
+            "grounded": true,
+            "max_ngram": 3
+          }
+        ],
+        "likely_hallucination": true
+      },
+      "answer_relevance": {
+        "score": 0.4,
+        "query_terms": [
+          "were",
+          "bert's",
+          "results",
+          "glue",
+          "benchmark?"
+        ],
+        "terms_found": 2,
+        "term_coverage": 0.4,
+        "is_uncertain": false,
+        "is_relevant": false
+      },
+      "context_relevance": {
+        "score": 0.36,
+        "avg_doc_relevance": 0.36,
+        "relevant_docs": 3,
+        "total_docs": 5,
+        "doc_scores": [
+          0.4,
+          0.2,
+          0.2,
+          0.6,
+          0.4
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": false,
+        "contradiction_count": 0,
+        "patterns": []
+      },
+      "quality_score": 0.3257971014492754
+    },
+    {
+      "query": "How did BERT perform on SQuAD?",
+      "timestamp": "2025-11-14T18:07:44.276592",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 12858.301877975464,
+      "answer": "According to Table 2, BERT performed as follows on SQuAD v1.1:\n\n* BERTBASE (Single): Dev EM = 80.8, Test F1 = 88.5\n* BERTLARGE (Single): Dev EM = 84.1, Test F1 = 90.9\n* BERTLARGE (Ensemble): Dev EM = 85.8, Test F1 = 91.8\n* BERTLARGE (Ens.+TriviaQA): Dev EM = 86.2, Test F1 = 92.2\n\nNote that the results for Human and other systems are also provided in Table 2, but they are not directly related to BERT's performance.",
+      "answer_length": 417,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "84.2 91.1 85.1 91.8\nBERTLARGE (Ens.+TriviaQA) 86.2 92.2 87.4 93.2\nTable 2:\nSQuAD 1.1 results. The BERT ensemble\nis 7x systems which use different pre-training check-\npoints and \ufb01ne-tuning seeds.\nSyste",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 6,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "the [MASK] symbol for MLM; SAME means that\nwe keep the target token as is; RND means that\nwe replace the target token with another random\ntoken.\nThe numbers in the left part of the table repre-\nsent t",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 15,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "range of tasks, such as question answering and\nlanguage inference, without substantial task-\nspeci\ufb01c architecture modi\ufb01cations.\nBERT is conceptually simple and empirically\npowerful.\nIt obtains new sta",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 0,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "tention masking. For the largest and most widely\nreported GLUE task, MNLI, BERT obtains a 4.6%\nabsolute accuracy improvement. On the of\ufb01cial\nGLUE leaderboard10, BERTLARGE obtains a score\nof 80.5, comp",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 5,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "System\nDev\nTest\nEM\nF1\nEM\nF1\nTop Leaderboard Systems (Dec 10th, 2018)\nHuman\n-\n-\n82.3 91.2\n#1 Ensemble - nlnet\n-\n-\n86.0 91.7\n#2 Ensemble - QANet\n-\n-\n84.5 90.5\nPublished\nBiDAF+ELMo (Single)\n-\n85.6\n-\n85.8",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 6,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.09090909090909091,
+        "total_sentences": 11,
+        "grounded_sentences": 1,
+        "ungrounded_sentences": 10,
+        "is_uncertain": false,
+        "sentence_details": [
+          {
+            "sentence": "According to Table 2, BERT performed as follows on SQuAD v1",
+            "grounded": true,
+            "word_overlap": 0.5454545454545454
+          },
+          {
+            "sentence": "1:\n\n* BERTBASE (Single): Dev EM = 80",
+            "grounded": false,
+            "word_overlap": 0.375
+          },
+          {
+            "sentence": "8, Test F1 = 88",
+            "grounded": false,
+            "word_overlap": 0.4
+          },
+          {
+            "sentence": "5\n* BERTLARGE (Single): Dev EM = 84",
+            "grounded": false,
+            "word_overlap": 0.375
+          },
+          {
+            "sentence": "1, Test F1 = 90",
+            "grounded": false,
+            "word_overlap": 0.4
+          },
+          {
+            "sentence": "9\n* BERTLARGE (Ensemble): Dev EM = 85",
+            "grounded": false,
+            "word_overlap": 0.375
+          },
+          {
+            "sentence": "8, Test F1 = 91",
+            "grounded": false,
+            "word_overlap": 0.4
+          },
+          {
+            "sentence": "8\n* BERTLARGE (Ens",
+            "grounded": false,
+            "word_overlap": 0.25
+          },
+          {
+            "sentence": "+TriviaQA): Dev EM = 86",
+            "grounded": false,
+            "word_overlap": 0.4
+          },
+          {
+            "sentence": "2, Test F1 = 92",
+            "grounded": false,
+            "word_overlap": 0.4
+          },
+          {
+            "sentence": "2\n\nNote that the results for Human and other systems are also provided in Table 2, but they are not directly related to BERT's performance",
+            "grounded": false,
+            "word_overlap": 0.375
+          }
+        ],
+        "likely_hallucination": true
+      },
+      "answer_relevance": {
+        "score": 0.6666666666666666,
+        "query_terms": [
+          "bert",
+          "perform",
+          "squad?"
+        ],
+        "terms_found": 2,
+        "term_coverage": 0.6666666666666666,
+        "is_uncertain": false,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.25,
+        "avg_doc_relevance": 0.25,
+        "relevant_docs": 0,
+        "total_docs": 5,
+        "doc_scores": [
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": true,
+        "contradiction_count": 1,
+        "patterns": [
+          [
+            "\\bnot\\b",
+            "\\bis\\b"
+          ]
+        ]
+      },
+      "quality_score": 0.33585858585858586
+    },
+    {
+      "query": "What programming language was used to implement BERT?",
+      "timestamp": "2025-11-14T18:07:57.138622",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 5126.882076263428,
+      "answer": "I don't have enough information in the provided context to answer this question. The context only mentions the implementation details of BERT, but it does not specify the programming language used.",
+      "answer_length": 197,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "is to \ufb01ne-tune models pre-trained with Ima-\ngeNet (Deng et al., 2009; Yosinski et al., 2014).\n3\nBERT\nWe introduce BERT and its detailed implementa-\ntion in this section. There are two steps in our\nfra",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 2,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "and the \ufb01nal hidden vector for the ith input token\nas Ti \u2208RH.\nFor a given token, its input representation is\nconstructed by summing the corresponding token,\nsegment, and position embeddings. A visuali",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "the [MASK] symbol for MLM; SAME means that\nwe keep the target token as is; RND means that\nwe replace the target token with another random\ntoken.\nThe numbers in the left part of the table repre-\nsent t",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 15,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "BERT: Pre-training of Deep Bidirectional Transformers for\nLanguage Understanding\nJacob Devlin\nMing-Wei Chang\nKenton Lee\nKristina Toutanova\nGoogle AI Language\n{jacobdevlin,mingweichang,kentonl,kristout",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 0,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "structing the entire input.\nAlthough this allows us to obtain a bidirec-\ntional pre-trained model, a downside is that we\nare creating a mismatch between pre-training and\n\ufb01ne-tuning, since the [MASK] t",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.0,
+        "total_sentences": 2,
+        "grounded_sentences": 0,
+        "ungrounded_sentences": 2,
+        "is_uncertain": true,
+        "sentence_details": [
+          {
+            "sentence": "I don't have enough information in the provided context to answer this question",
+            "grounded": false,
+            "word_overlap": 0.3076923076923077
+          },
+          {
+            "sentence": "The context only mentions the implementation details of BERT, but it does not specify the programming language used",
+            "grounded": false,
+            "word_overlap": 0.4375
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.6666666666666666,
+        "query_terms": [
+          "programming",
+          "language",
+          "was",
+          "used",
+          "implement",
+          "bert?"
+        ],
+        "terms_found": 4,
+        "term_coverage": 0.6666666666666666,
+        "is_uncertain": true,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.16666666666666666,
+        "avg_doc_relevance": 0.16666666666666666,
+        "relevant_docs": 1,
+        "total_docs": 5,
+        "doc_scores": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.3333333333333333,
+          0.16666666666666666,
+          0.0
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": true,
+        "contradiction_count": 1,
+        "patterns": [
+          [
+            "\\bnot\\b",
+            "\\bis\\b"
+          ]
+        ]
+      },
+      "quality_score": 0.27777777777777773
+    },
+    {
+      "query": "Who funded the BERT research?",
+      "timestamp": "2025-11-14T18:08:02.268058",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 5901.039838790894,
+      "answer": "I don't have enough information in the provided context to answer this question. The context only discusses the details of the BERT model, its implementation, and comparisons with other pre-training methods, but it does not mention any funding sources or acknowledgments.",
+      "answer_length": 271,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "the [MASK] symbol for MLM; SAME means that\nwe keep the target token as is; RND means that\nwe replace the target token with another random\ntoken.\nThe numbers in the left part of the table repre-\nsent t",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 15,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "approach.\nThe most comparable existing pre-training\nmethod to BERT is OpenAI GPT, which trains a\nleft-to-right Transformer LM on a large text cor-\npus. In fact, many of the design decisions in BERT\nwe",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "training tasks presented in Section 3.1 account for\nthe majority of the empirical improvements, but\nwe do note that there are several other differences\nbetween how BERT and GPT were trained:\n\u2022 GPT is ",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "structing the entire input.\nAlthough this allows us to obtain a bidirec-\ntional pre-trained model, a downside is that we\nare creating a mismatch between pre-training and\n\ufb01ne-tuning, since the [MASK] t",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 3,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "is to \ufb01ne-tune models pre-trained with Ima-\ngeNet (Deng et al., 2009; Yosinski et al., 2014).\n3\nBERT\nWe introduce BERT and its detailed implementa-\ntion in this section. There are two steps in our\nfra",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 2,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.5,
+        "total_sentences": 2,
+        "grounded_sentences": 1,
+        "ungrounded_sentences": 1,
+        "is_uncertain": true,
+        "sentence_details": [
+          {
+            "sentence": "I don't have enough information in the provided context to answer this question",
+            "grounded": false,
+            "word_overlap": 0.3076923076923077
+          },
+          {
+            "sentence": "The context only discusses the details of the BERT model, its implementation, and comparisons with other pre-training methods, but it does not mention any funding sources or acknowledgments",
+            "grounded": true,
+            "word_overlap": 0.5384615384615384
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.25,
+        "query_terms": [
+          "who",
+          "funded",
+          "bert",
+          "research?"
+        ],
+        "terms_found": 1,
+        "term_coverage": 0.25,
+        "is_uncertain": true,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.2,
+        "avg_doc_relevance": 0.2,
+        "relevant_docs": 0,
+        "total_docs": 5,
+        "doc_scores": [
+          0.25,
+          0.25,
+          0.25,
+          0.0,
+          0.25
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": true,
+        "contradiction_count": 1,
+        "patterns": [
+          [
+            "\\bnot\\b",
+            "\\bis\\b"
+          ]
+        ]
+      },
+      "quality_score": 0.31666666666666665
+    },
+    {
+      "query": "What is the carbon footprint of training BERT?",
+      "timestamp": "2025-11-14T18:08:08.169814",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 6795.4089641571045,
+      "answer": "I don't have enough information in the provided context to answer this question. The context only discusses the differences between how BERT and GPT were trained, as well as some ablation studies on pre-training steps and masking strategies, but it does not mention anything about the carbon footprint of training BERT.",
+      "answer_length": 319,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "training tasks presented in Section 3.1 account for\nthe majority of the empirical improvements, but\nwe do note that there are several other differences\nbetween how BERT and GPT were trained:\n\u2022 GPT is ",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "classi\ufb01er token ([CLS]) which are only in-\ntroduced at \ufb01ne-tuning time; BERT learns\n[SEP], [CLS] and sentence A/B embed-\ndings during pre-training.\n\u2022 GPT was trained for 1M steps with a batch\nsize of ",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "tention masking. For the largest and most widely\nreported GLUE task, MNLI, BERT obtains a 4.6%\nabsolute accuracy improvement. On the of\ufb01cial\nGLUE leaderboard10, BERTLARGE obtains a score\nof 80.5, comp",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 5,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "400\n600\n800\n1,000\n76\n78\n80\n82\n84\nPre-training Steps (Thousands)\nMNLI Dev Accuracy\nBERTBASE (Masked LM)\nBERTBASE (Left-to-Right)\nFigure 5: Ablation over number of training steps. This\nshows the MNLI ac",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 15,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "model begins to outperform the LTR model\nalmost immediately.\nC.2\nAblation for Different Masking\nProcedures\nIn Section 3.1, we mention that BERT uses a\nmixed strategy for masking the target tokens when",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 15,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.5,
+        "total_sentences": 2,
+        "grounded_sentences": 1,
+        "ungrounded_sentences": 1,
+        "is_uncertain": true,
+        "sentence_details": [
+          {
+            "sentence": "I don't have enough information in the provided context to answer this question",
+            "grounded": false,
+            "word_overlap": 0.46153846153846156
+          },
+          {
+            "sentence": "The context only discusses the differences between how BERT and GPT were trained, as well as some ablation studies on pre-training steps and masking strategies, but it does not mention anything about the carbon footprint of training BERT",
+            "grounded": true,
+            "max_ngram": 3
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.75,
+        "query_terms": [
+          "carbon",
+          "footprint",
+          "training",
+          "bert?"
+        ],
+        "terms_found": 3,
+        "term_coverage": 0.75,
+        "is_uncertain": true,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.25,
+        "avg_doc_relevance": 0.25,
+        "relevant_docs": 0,
+        "total_docs": 5,
+        "doc_scores": [
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": true,
+        "contradiction_count": 1,
+        "patterns": [
+          [
+            "\\bnot\\b",
+            "\\bis\\b"
+          ]
+        ]
+      },
+      "quality_score": 0.5
+    },
+    {
+      "query": "What are the key innovations that make BERT different from GPT?",
+      "timestamp": "2025-11-14T18:08:14.967465",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 14579.047918319702,
+      "answer": "Based on the provided context, the key innovations that make BERT different from GPT are:\n\n1. Bidirectional self-attention vs. constrained self-attention: BERT uses bidirectional self-attention, where every token can attend to both its left and right context. In contrast, GPT uses constrained self-attention, where every token can only attend to context to its left.\n2. Pre-training data: BERT is trained on a combination of the BooksCorpus (800M words) and Wikipedia (2,500M words), while GPT is trained solely on the BooksCorpus (800M words).\n3. Use of [SEP] and [CLS] tokens: BERT learns these special tokens during pre-training, whereas GPT introduces them only at fine-tuning time.\n4. Bi-directionality: The bi-directionality of BERT's architecture, which allows it to consider both left and right context when making predictions.\n\nThese differences are highlighted in the text as key innovations that make BERT different from GPT.",
+      "answer_length": 937,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "training tasks presented in Section 3.1 account for\nthe majority of the empirical improvements, but\nwe do note that there are several other differences\nbetween how BERT and GPT were trained:\n\u2022 GPT is ",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "approach.\nThe most comparable existing pre-training\nmethod to BERT is OpenAI GPT, which trains a\nleft-to-right Transformer LM on a large text cor-\npus. In fact, many of the design decisions in BERT\nwe",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "BERT (Ours)\nTrm\nTrm\nTrm\nTrm\nTrm\nTrm\n...\n...\nTrm\nTrm\nTrm\nTrm\nTrm\nTrm\n...\n...\nOpenAI GPT\nLstm\nELMo\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\nLstm\n T1\nT2\n TN\n...\n...\n...\n...\n...\n E1\nE2\n EN\n...\n T",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 12,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "H, and the number of self-attention heads as A.3\nWe primarily report results on two model sizes:\nBERTBASE (L=12, H=768, A=12, Total Param-\neters=110M) and BERTLARGE (L=24, H=1024,\nA=16, Total Paramete",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 2,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "A.4\nComparison of BERT, ELMo ,and\nOpenAI GPT\nHere we studies the differences in recent popular\nrepresentation learning models including ELMo,\nOpenAI GPT and BERT. The comparisons be-\ntween the model a",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 0.45454545454545453,
+        "total_sentences": 11,
+        "grounded_sentences": 5,
+        "ungrounded_sentences": 6,
+        "is_uncertain": false,
+        "sentence_details": [
+          {
+            "sentence": "Based on the provided context, the key innovations that make BERT different from GPT are:\n\n1",
+            "grounded": false,
+            "word_overlap": 0.4
+          },
+          {
+            "sentence": "Bidirectional self-attention vs",
+            "grounded": true,
+            "word_overlap": 0.6666666666666666
+          },
+          {
+            "sentence": "constrained self-attention: BERT uses bidirectional self-attention, where every token can attend to both its left and right context",
+            "grounded": true,
+            "word_overlap": 0.7777777777777778
+          },
+          {
+            "sentence": "In contrast, GPT uses constrained self-attention, where every token can only attend to context to its left",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "Pre-training data: BERT is trained on a combination of the BooksCorpus (800M words) and Wikipedia (2,500M words), while GPT is trained solely on the BooksCorpus (800M words)",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "Use of [SEP] and [CLS] tokens: BERT learns these special tokens during pre-training, whereas GPT introduces them only at fine-tuning time",
+            "grounded": false,
+            "word_overlap": 0.38095238095238093
+          },
+          {
+            "sentence": "Bi-directionality: The bi-directionality of BERT's architecture, which allows it to consider both left and right context when making predictions",
+            "grounded": false,
+            "word_overlap": 0.42105263157894735
+          },
+          {
+            "sentence": "These differences are highlighted in the text as key innovations that make BERT different from GPT",
+            "grounded": true,
+            "word_overlap": 0.625
+          }
+        ],
+        "likely_hallucination": true
+      },
+      "answer_relevance": {
+        "score": 0.8571428571428571,
+        "query_terms": [
+          "key",
+          "innovations",
+          "make",
+          "bert",
+          "different",
+          "from",
+          "gpt?"
+        ],
+        "terms_found": 6,
+        "term_coverage": 0.8571428571428571,
+        "is_uncertain": false,
+        "is_relevant": true
+      },
+      "context_relevance": {
+        "score": 0.225,
+        "avg_doc_relevance": 0.225,
+        "relevant_docs": 1,
+        "total_docs": 5,
+        "doc_scores": [
+          0.25,
+          0.375,
+          0.125,
+          0.125,
+          0.25
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": false,
+        "contradiction_count": 0,
+        "patterns": []
+      },
+      "quality_score": 0.5122294372294373
+    },
+    {
+      "query": "How does fine-tuning work in BERT?",
+      "timestamp": "2025-11-14T18:08:29.549413",
+      "success": true,
+      "error": null,
+      "total_latency_ms": 9384.570121765137,
+      "answer": "Fine-tuning in BERT is straightforward since the self-attention mechanism in the Transformer allows it to model many downstream tasks\u2014whether they involve single text or text pairs\u2014by swapping out the appropriate inputs and outputs. For applications involving text pairs, a common pattern is to independently encode text pairs before applying bidirectional cross attention.\n\nAdditionally, according to Section 3.2 of the context, fine-tuning BERT involves initializing the model with pre-trained parameters and then fine-tuning all of its parameters using labeled data from the specific task at hand.",
+      "answer_length": 600,
+      "num_source_docs": 5,
+      "source_docs": [
+        {
+          "content": "is to \ufb01ne-tune models pre-trained with Ima-\ngeNet (Deng et al., 2009; Yosinski et al., 2014).\n3\nBERT\nWe introduce BERT and its detailed implementa-\ntion in this section. There are two steps in our\nfra",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 2,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "classi\ufb01er token ([CLS]) which are only in-\ntroduced at \ufb01ne-tuning time; BERT learns\n[SEP], [CLS] and sentence A/B embed-\ndings during pre-training.\n\u2022 GPT was trained for 1M steps with a batch\nsize of ",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "extract long contiguous sequences.\n3.2\nFine-tuning BERT\nFine-tuning is straightforward since the self-\nattention mechanism in the Transformer al-\nlows BERT to model many downstream tasks\u2014\nwhether they",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 4,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "training tasks presented in Section 3.1 account for\nthe majority of the empirical improvements, but\nwe do note that there are several other differences\nbetween how BERT and GPT were trained:\n\u2022 GPT is ",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 13,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        },
+        {
+          "content": "trained as a left-to-right LM without the next sentence\nprediction, like OpenAI GPT. \u201c+ BiLSTM\u201d adds a ran-\ndomly initialized BiLSTM on top of the \u201cLTR + No\nNSP\u201d model during \ufb01ne-tuning.\nablation stud",
+          "metadata": {
+            "author": "",
+            "creationDate": "D:20190528000751Z",
+            "creator": "LaTeX with hyperref package",
+            "file_path": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "format": "PDF 1.5",
+            "keywords": "",
+            "modDate": "D:20190528000751Z",
+            "page": 7,
+            "producer": "pdfTeX-1.40.17",
+            "source": "/Users/edsonflores/Documents/vsc/Freelance/dev-chatbot-rag/data/raw/bert.pdf",
+            "subject": "",
+            "title": "",
+            "total_pages": 16,
+            "trapped": ""
+          }
+        }
+      ],
+      "meets_latency_threshold": false,
+      "faithfulness": {
+        "score": 1.0,
+        "total_sentences": 4,
+        "grounded_sentences": 4,
+        "ungrounded_sentences": 0,
+        "is_uncertain": false,
+        "sentence_details": [
+          {
+            "sentence": "Fine-tuning in BERT is straightforward since the self-attention mechanism in the Transformer allows it to model many downstream tasks\u2014whether they involve single text or text pairs\u2014by swapping out the appropriate inputs and outputs",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "For applications involving text pairs, a common pattern is to independently encode text pairs before applying bidirectional cross attention",
+            "grounded": true,
+            "max_ngram": 3
+          },
+          {
+            "sentence": "Additionally, according to Section 3",
+            "grounded": true,
+            "word_overlap": 0.6
+          },
+          {
+            "sentence": "2 of the context, fine-tuning BERT involves initializing the model with pre-trained parameters and then fine-tuning all of its parameters using labeled data from the specific task at hand",
+            "grounded": true,
+            "max_ngram": 3
+          }
+        ],
+        "likely_hallucination": false
+      },
+      "answer_relevance": {
+        "score": 0.3333333333333333,
+        "query_terms": [
+          "fine-tuning",
+          "work",
+          "bert?"
+        ],
+        "terms_found": 1,
+        "term_coverage": 0.3333333333333333,
+        "is_uncertain": false,
+        "is_relevant": false
+      },
+      "context_relevance": {
+        "score": 0.1,
+        "avg_doc_relevance": 0.1,
+        "relevant_docs": 0,
+        "total_docs": 5,
+        "doc_scores": [
+          0.25,
+          0.0,
+          0.25,
+          0.0,
+          0.0
+        ]
+      },
+      "contradictions": {
+        "has_potential_contradiction": false,
+        "contradiction_count": 0,
+        "patterns": []
+      },
+      "quality_score": 0.4777777777777778
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+query,latency_ms,answer_length,num_sources,quality_score,faithfulness,answer_relevance,context_relevance,likely_hallucination,has_contradiction,is_uncertain
+What does BERT stand for?,14627.264976501465,324,5,0.2888888888888889,0.0,0.6666666666666666,0.2,False,False,True
+What are the two pre-training tasks used in BERT?,6332.308053970337,277,5,0.42,0.5,0.4,0.36000000000000004,False,True,True
+What is the difference between BERT-base and BERT-large?,12607.395887374878,542,5,0.3907407407407408,0.2222222222222222,0.75,0.2,True,False,False
+Which datasets were used for pre-training BERT?,8518.009185791016,417,5,0.6587301587301587,0.8,0.8333333333333334,0.3428571428571428,False,True,True
+What is the maximum sequence length used in BERT?,5650.43830871582,237,5,0.43333333333333335,0.5,0.6,0.2,False,True,True
+How does BERT achieve bidirectional context?,6302.164077758789,338,5,0.5922222222222221,0.6666666666666666,0.75,0.36,False,False,False
+What is masked language modeling?,6892.834663391113,347,5,0.6888888888888888,1.0,0.6666666666666666,0.4,False,False,False
+Why is BERT better than previous models like ELMo?,7268.600940704346,303,5,0.20952380952380953,0.0,0.42857142857142855,0.19999999999999998,False,True,True
+What is the next sentence prediction task?,6987.3340129852295,367,5,0.7166666666666667,1.0,0.75,0.4,False,False,False
+What were BERT's results on the GLUE benchmark?,17526.220083236694,564,5,0.3257971014492754,0.21739130434782608,0.4,0.36,True,False,False
+How did BERT perform on SQuAD?,12858.301877975464,417,5,0.33585858585858586,0.09090909090909091,0.6666666666666666,0.25,True,True,False
+What programming language was used to implement BERT?,5126.882076263428,197,5,0.27777777777777773,0.0,0.6666666666666666,0.16666666666666666,False,True,True
+Who funded the BERT research?,5901.039838790894,271,5,0.31666666666666665,0.5,0.25,0.2,False,True,True
+What is the carbon footprint of training BERT?,6795.4089641571045,319,5,0.5,0.5,0.75,0.25,False,True,True
+What are the key innovations that make BERT different from GPT?,14579.047918319702,937,5,0.5122294372294373,0.45454545454545453,0.8571428571428571,0.225,True,False,False
+How does fine-tuning work in BERT?,9384.570121765137,600,5,0.4777777777777778,1.0,0.3333333333333333,0.1,False,False,False
